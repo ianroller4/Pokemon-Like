@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fc7fdfeef242a787633db5a863573, type: 3}
+  m_Name: Ember
+  m_EditorClassIdentifier: 
+  name: Ember
+  description: 
+  type: 2
+  category: 2
+  power: 40
+  accuracy: 100
+  alwaysHits: 0
+  pp: 20
+  priority: 0
+  effects:
+    mods: []
+    status: 0
+    volatileStatus: 0
+  secondEffects:
+  - mods: []
+    status: 3
+    volatileStatus: 0
+    chance: 50
+    target: 0
+  target: 0
