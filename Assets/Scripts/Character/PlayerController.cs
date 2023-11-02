@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
     private Character character;
 
     public event Action OnEncountered;
+    public event Action<Collider2D> InTrainerView;
 
     private void Awake () {
         character = GetComponent<Character>();
@@ -80,9 +81,12 @@ public class PlayerController : MonoBehaviour {
 
     private void CheckIfInTrainerView () {
 
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.FovLayer) != null) { // Checks if in trainers view
+        var collider = Physics2D.OverlapCircle(transform.position, 0.2f, GameLayers.i.FovLayer);
 
-            Debug.Log("In Trainers View");
+        if (collider != null) { // Checks if in trainers view
+
+            character.Animator.isMoving = false;
+            InTrainerView?.Invoke(collider);
 
         }
 
